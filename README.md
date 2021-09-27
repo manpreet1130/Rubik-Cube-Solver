@@ -18,7 +18,7 @@ The project was divided into two main parts:
 1. Identifying the colours of each facelet on each face
 2. Passing these values to the kociemba library and receiving the algorithm solution
 
-1) To identify each of the 6 colours, which are **WHITE**, **RED**, **GREEN**, **YELLOW**, **ORANGE** and **BLUE**, it was decided that the HSV image would be a better choice in comparison to RGB image as HSV is more robust to external light changes and hence a better choice for this application. A mask was created for each colour which included the lower and upper bounds for the hue, saturation and value respectively using which the colours were estimated for each face capture.
+To identify each of the 6 colours, which are **WHITE**, **RED**, **GREEN**, **YELLOW**, **ORANGE** and **BLUE**, it was decided that the HSV image would be a better choice in comparison to RGB image as HSV is more robust to external light changes and hence a better choice for this application. A mask was created for each colour which included the lower and upper bounds for the hue, saturation and value respectively using which the colours were estimated for each face capture.
 There are a total of 6 face captures and each capture is initiated with the '**A**' key. Following the capturing, an algorithm string is displayed on the console which when followed correctly, ends with a solved cube.
 
 The naming convention for each face chosen by me is given below and may be changed if required: <br>
