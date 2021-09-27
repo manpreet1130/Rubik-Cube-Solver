@@ -1,4 +1,4 @@
-# Rubiks-Cube-Solver
+# Rubik's Cube Solver
 Solve any **Rubik's Cube** orientation using **Computer Vision** under 20 moves with the help of the **Kociemba Method**.
 
 ## Table of Contents
@@ -6,11 +6,12 @@ Solve any **Rubik's Cube** orientation using **Computer Vision** under 20 moves 
 2. [Procedure](#procedure)
 3. [Scripts](#scripts)
 4. [Future Development](#future-development)
+5. [Note](#note)
 
 ## Usage
-Clone the repository `git clone https://github.com/manpreet1130/Rubiks-Cube-Solver`  
-Run `python setup.py` in order to configure the mask values as required
-Run `python solver.py` to run the main solver algorithm
+Clone the repository `git clone https://github.com/manpreet1130/Rubiks-Cube-Solver` <br>
+Run `python setup.py` in order to configure the mask values as required <br>
+Run `python solver.py` to run the main solver algorithm <br>
 
 ## Procedure
 The project was divided into two main parts:
@@ -60,8 +61,6 @@ which in this case would correspond to <br>
               D1 D2 D3
               D4 D5 D6
               D7 D8 D9
-           
-
 </pre> 
 
 The resulting algorithm string for this particular orientation would be: <br>
@@ -71,4 +70,20 @@ The notation rules for this are as follows:
 1) The letters U, D, L, R, F, and B correspond to the faces and rotation is done by 90 deg clockwise if no suffix.
 2) The `'` at the end of a letter correspondes to rotating that face anticlockwise by 90 deg.
 3) The `2` corresponds to rotating that face clockwise by 180 deg.
+
+<p align = "center"><img align = "center" src = "images/result.png"/></p>
+
+## Scripts
+### setup.py
+This script is there in case the masking values are not suited as per the colours of the cube. This script can be used to configure the masking values for each colour and update the same in the main script constants.
+
+### solver.py
+This is the main script to run in order to get the solution of the cube orientation.
+
+## Future Development
+As we now have the solving algorithm, the next step would be to create a setup capable of solving the cube by itself.
+
+## Note
+If the program terminates and doesn't provide the result, the colors on the cube weren't identified correctly. It must be taken into consideration that the facelets fall within the regions provided as any misalignment will not be detected as a correct colour and will lead to no algorithm being returned.
+
 
