@@ -127,17 +127,33 @@ if __name__ == "__main__":
 
     ''' 
         The output will comprise of an algorithm string which when executed correctly will 
-        help solve the cube. 
+        help solve the cube under 20 moves
     '''
     print("Generating result...")
     inputString = ""
-    for face in enumerate(capturedHSV):
-        for region in enumerate(face):
-            position = check(region)
-            if(position == "-"):
-                print("Fix the mask ranges and try again...")
-                break
-            inputString += position
+    for face in capturedHSV:
+        for region in face:
+            if(region[0] > w['lower'][0] and region[0] < w['upper'][0] and region[1] > w['lower'][1] and region[1] < w['upper'][1] and region[2] > w['lower'][2] and region[2] < w['upper'][2]):
+                print('W', end = " ")
+                inputString += "U"
+            elif(region[0] > r['lower'][0] and region[0] < r['upper'][0] and region[1] > r['lower'][1] and region[1] < r['upper'][1] and region[2] > r['lower'][2] and region[2] < r['upper'][2]):
+                print('R', end = " ")
+                inputString += "R"
+            elif(region[0] > g['lower'][0] and region[0] < g['upper'][0] and region[1] > g['lower'][1] and region[1] < g['upper'][1] and region[2] > g['lower'][2] and region[2] < g['upper'][2]):
+                print('G', end = " ")
+                inputString += "F"
+            elif(region[0] > y['lower'][0] and region[0] < y['upper'][0] and region[1] > y['lower'][1] and region[1] < y['upper'][1] and region[2] > y['lower'][2] and region[2] < y['upper'][2]):
+                print('Y', end = " ")
+                inputString += "D"
+            elif(region[0] > o['lower'][0] and region[0] < o['upper'][0] and region[1] > o['lower'][1] and region[1] < o['upper'][1] and region[2] > o['lower'][2] and region[2] < o['upper'][2]):
+                print('O', end = " ")
+                inputString += "L"
+            elif(region[0] > b['lower'][0] and region[0] < b['upper'][0] and region[1] > b['lower'][1] and region[1] < b['upper'][1] and region[2] > b['lower'][2] and region[2] < b['upper'][2]):
+                print('B', end = " ")
+                inputString += "B"
+            else:
+                print("-")
+                inputString += "-"
         print(" ")
     if(len(inputString) == 54):
         print(inputString)
