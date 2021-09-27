@@ -68,7 +68,7 @@ The resulting algorithm string for this particular orientation would be: <br>
 
 The notation rules for this are as follows:
 1) The letters U, D, L, R, F, and B correspond to the faces and rotation is done by 90 deg clockwise if no suffix.
-2) The `'` at the end of a letter correspondes to rotating that face anticlockwise by 90 deg.
+2) The `'` at the end of a letter corresponds to rotating that face anticlockwise by 90 deg.
 3) The `2` corresponds to rotating that face clockwise by 180 deg.
 
 <p align = "center"><img align = "center" src = "images/result.png"/></p>
